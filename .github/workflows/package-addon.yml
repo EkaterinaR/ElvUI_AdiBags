@@ -18,7 +18,8 @@ jobs:
     - name: Get name of addon
       id: init
       run: |
-        addon_name=$(ls *.toc)
+       # addon_name=$(ls *.toc)
+        addon_name="AdiBags"
         addon_name=$(basename $addon_name .toc)
         tag_name=${addon_name}-${{github.event.inputs.version}}
         echo "::set-output name=addon_name::${addon_name}"
